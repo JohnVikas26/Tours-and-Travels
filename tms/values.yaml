@@ -31,7 +31,7 @@ admin:
   name: admin
   replicaCount: 1
   image:
-    repository: vikasbandili007/admin
+    repository: vikasbandili007/tours
     tag: latest
     pullPolicy: IfNotPresent
   service:
