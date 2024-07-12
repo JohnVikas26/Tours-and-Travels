@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.admin.name }}
+spec:
+  replicas: {{ .Values.admin.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.admin.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.admin.name }}
+    spec:
+      containers:
+      - name: {{ .Values.admin.name }}
+        image: "{{ .Values.admin.image.repository }}:{{ .Values.admin.image.tag }}"
+        imagePullPolicy: {{ .Values.admin.image.pullPolicy }}
+        ports:
+        - containerPort: {{ .Values.admin.service.port }}
