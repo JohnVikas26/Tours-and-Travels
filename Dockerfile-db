@@ -1,0 +1,10 @@
+FROM mysql:5.7
+
+COPY ./database/tms.sql /docker-entrypoint-initdb.d/
+
+ENV MYSQL_ROOT_PASSWORD=rootpassword
+ENV MYSQL_DATABASE=tms
+ENV MYSQL_USER=tmsuser
+ENV MYSQL_PASSWORD=tmspassword
+
+EXPOSE 3306
