@@ -2,7 +2,7 @@ app:
   name: php-app
   replicaCount: 2
   image:
-    repository: vikasbandili007/tours-and-travels
+    repository: vikasbandili007/tours
     tag: latest
     pullPolicy: IfNotPresent
   service:
@@ -18,7 +18,7 @@ app:
 database:
   name: db
   image:
-    repository: vikasbandili007/tours-and-travels
+    repository: vikasbandili007/tours
     tag: latest
     pullPolicy: IfNotPresent
   service:
@@ -31,7 +31,7 @@ admin:
   name: admin
   replicaCount: 1
   image:
-    repository: vikasbandili007/tours-and-travels
+    repository: vikasbandili007/tours
     tag: latest
     pullPolicy: IfNotPresent
   service:
